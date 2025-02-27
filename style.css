@@ -3,6 +3,100 @@ body {
     margin: 0;
     padding: 0;
 }
+.introduce_us {
+    Font-weight: bold;
+    color: #1b1a1a; /* 文字色 */
+    font-size: 5em;
+    text-align: center; /* 文字を中央揃え */
+}
+.sakura {
+    color: #edc1f8; /* 文字色 */
+    Font-weight: bold;
+    text-shadow:
+    1px 1px 0px #000, -1px -1px 0px #000,
+    -1px 1px 0px #000,  1px -1px 0px #000,
+    1px 0px 0px #000, -1px  0px 0px #000,
+    0px 1px 0px #000,  0px -1px 0px #000;
+}
+.mochi {
+    color: #33d496; /* 文字色 */
+    Font-weight: bold;
+    text-shadow:
+    1px 1px 0px #000, -1px -1px 0px #000,
+    -1px 1px 0px #000,  1px -1px 0px #000,
+    1px 0px 0px #000, -1px  0px 0px #000,
+    0px 1px 0px #000,  0px -1px 0px #000;
+}
+/* タブ全体を囲むコンテナの設定 */
+.tab-switch {
+    display: flex; /* タブを横並びに */
+    flex-wrap: wrap; /* 幅に応じて折り返し */
+    margin: auto;/* コンテナの中央寄せ */
+    justify-content: center;/* タブの中央寄せ */
+    gap: 0 5px;/* タブ間の余白 */
+}
+
+/* 各タブボタンの設定 */
+.tab-switch > label {
+    border-radius: 10px;
+    flex: 1 1 auto; /* タブが均等に幅をとるが、幅を超えると折り返す */
+    order: -1; /* 上部に表示する */
+    position: relative; /* 絶対位置指定用の基準 */
+    padding: .7em 1em; /* 上下左右の内側余白 */
+    background: linear-gradient(#bd95be,#ec90ff); /* 背景色 */
+    color: #f9fcfb; /* 文字色 */
+    text-align: center; /* 文字を中央揃え */
+    cursor: pointer; /* ポインターを指アイコンに変更 */
+    transition:.3s all;/*変化を滑らかに*/
+    Font-weight: bold;
+    text-shadow:
+        1px 1px 0px #000, -1px -1px 0px #000,
+        -1px 1px 0px #000,  1px -1px 0px #000,
+        1px 0px 0px #000, -1px  0px 0px #000,
+        0px 1px 0px #000,  0px -1px 0px #000;
+        
+}
+
+/* タブボタンのホバーおよび選択状態のスタイル */
+.tab-switch > label:hover,
+.tab-switch label:has(:checked) {
+    background: linear-gradient(#95beb5,#00995e); /* ホバー/選択時の背景色 */
+    color: #ffffff; /* ホバー/選択時の文字色 */
+}
+
+/* ラジオボタン自体は非表示 */
+input.tab {
+    display: none; /* 見た目に表示されないようにする */
+}
+
+/* タブコンテンツのスタイル */
+.tab-switch > div {
+    display: none; /* 初期状態では非表示 */
+    width: 100%; /* コンテンツ幅を全体に */
+    padding: 1.5em 1em; /* 内側余白 */
+}
+
+/* 選択されたタブのコンテンツを表示 */
+.tab-switch label:has(:checked) + div {
+    display: block; /* 選択されたタブに対応するコンテンツを表示 */
+}
+
+/* 画像 */
+.mochi_images {
+    max-width:1%;
+    height:auto;
+}
+
+.display-flex_1 {
+    display: flex;
+    height: 4.5em;
+    justify-content:
+    flex-start; 
+}
+
+/* .display-inline {
+    display: inline;
+} */
 
 h1{
     text-align: center;
@@ -10,10 +104,16 @@ h1{
 h2{
     text-align: center;
 }
-label, select, input {
+label, select{
     display: block;
-    margin: 0.5em auto;
+    margin: 0.5em;
     text-align: center;
+}
+
+.searchinput {
+    display: block;
+    margin: 0.5em;
+    text-align: left;
 }
 
 table{
@@ -109,3 +209,4 @@ input {
         font-size: 1em;
     }
 }
+

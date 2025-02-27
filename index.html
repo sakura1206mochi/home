@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <h1>歌枠へようこそ！</h1>
 </head>
 <body>
-    <h2>レパートリー一覧</h2>
-    
-    <label for="searchType">検索対象</label>
-    <select id="searchType">
-        <option value="title">曲名</option>
-        <option value="singer">歌手名</option>
-    </select>
-    
-    <input type="text" id="searchInput" placeholder="検索...">
-    
-    <table id="csvTable">
-        <thead>
-            <tr>
-                <th>曲名</th>
-                <th>歌手名</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="tab-switch"> 
+        <label><input class="tab" type="radio" name="TAB" checked>Topページ</label> 
+        <div class="tab-content"> 
+            <div class="introduce_us">夫婦ライバー<a class="sakura">桜</a><a class="mochi">餅</a>です！</div>
+        </div> 
+     
+        <label><input class="tab" type="radio" name="TAB">おもちの歌リスト</label> 
+        <div class="tab-content"> 
+            <h2>曲一覧</h2>
+            <div class="display-flex_1">
+                <img class="mochi_image" src="images/omochi_full.png">
+                <select id="searchType">
+                    <option value="" selected disabled>検索対象</option>
+                    <option value="title">曲名</option>
+                    <option value="singer">歌手名</option>
+                </select>
+                <input class="searchinput" type="text" id="searchInput" placeholder="検索">
+            </div>
+            <table id="csvTable">
+                <thead>
+                    <tr>
+                        <th>曲名</th>
+                        <th>歌手名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div> 
+     
+        <label><input class="tab" type="radio" name="TAB">いぶちゃんの歌リスト</label> 
+        <div class="tab-content"> 
+            <h1>No Image</h1>
+        </div> 
+    </div>
     
     <script src="script.js"></script>
 </body>
