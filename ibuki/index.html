@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/">TOP</a></li>
+                <li><a href="/omochi">おもちの歌リスト</a></li>
+                <li><a href="/ibuki">いぶちゃんの歌リスト</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="list_text">曲一覧</div>
+        <div class="display-flex_1">
+            <img class="mochi_image" src="../images/ibuki_image">
+            <select class="search" id="searchType">
+                <option value="" selected disabled>検索対象</option>
+                <option value="title">曲名</option>
+                <option value="singer">歌手名</option>
+            </select>
+            <input class="searchinput" type="text" id="searchInput" placeholder="タイトル">
+        </div>
+        <table id="csvTable">
+            <thead>
+                <tr>
+                    <th>曲名</th>
+                    <th>歌手名</th>
+                    <th>作品コード</th> 
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,9 +2,11 @@
 header {
     list-style-type: none; /* デフォルトのマーカーを削除 */
     margin: 0;
+    /* padding: 0; */
     display: flex; /* 子要素を横並びに */
     border-radius: 3px;
     /* flex: 1 1 auto; タブが均等に幅をとるが、幅を超えると折り返す */
+    /* flex-wrap: wrap; 幅に応じて折り返し */
     order: -1; /* 上部に表示する */
     position: relative; /* 絶対位置指定用の基準 */
     padding: .7em 1em; /* 上下左右の内側余白 */
@@ -185,6 +187,13 @@ table tr:last-child td:last-child {
 
 label {
     font-size: 1.5em;
+}
+
+/* コード列のスタイル */
+#csvTable th:nth-child(3),
+#csvTable td:nth-child(3) {
+    width: 5%; /* 必要に応じて調整 */
+    text-align: center; /* ボタンの中央揃え */
 }
 
 select {

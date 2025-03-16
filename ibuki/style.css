@@ -2,9 +2,11 @@
 header {
     list-style-type: none; /* デフォルトのマーカーを削除 */
     margin: 0;
+    /* padding: 0; */
     display: flex; /* 子要素を横並びに */
     border-radius: 3px;
     /* flex: 1 1 auto; タブが均等に幅をとるが、幅を超えると折り返す */
+    /* flex-wrap: wrap; 幅に応じて折り返し */
     order: -1; /* 上部に表示する */
     position: relative; /* 絶対位置指定用の基準 */
     padding: .7em 1em; /* 上下左右の内側余白 */
@@ -97,6 +99,8 @@ body {
     text-align: center; /* 文字を中央揃え */
 }
 
+
+
 /* 画像 */
 .mochi_images {
     max-width:1%;
@@ -146,16 +150,16 @@ table th:first-child{
   
 table th:last-child{
     border-radius: 0 5px 0 0;
-    border-right: 1px solid #3c6690;
+    border-right: 1px solid #88903c;
 }
   
 table th{
     text-align: center;
     color:white;
-    background: linear-gradient(#95beab,#1ca06d);
-    border-left: 1px solid #55a385;
-    border-top: 1px solid #55a385;
-    border-bottom: 1px solid #55a385;
+    background: linear-gradient(#b995be,#cb67d8);
+    border-left: 1px solid #a355a3;
+    border-top: 1px solid #a355a3;
+    border-bottom: 1px solid #a355a3;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
     width: 25%;
     padding: 10px 0;
@@ -181,6 +185,13 @@ table tr:last-child td:first-child {
   
 table tr:last-child td:last-child {
     border-radius: 0 0 5px 0;
+}
+
+/* コード列のスタイル */
+#csvTable th:nth-child(3),
+#csvTable td:nth-child(3) {
+    width: 5%; /* 必要に応じて調整 */
+    text-align: center; /* ボタンの中央揃え */
 }
 
 label {
